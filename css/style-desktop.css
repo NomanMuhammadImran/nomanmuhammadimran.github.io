@@ -1,0 +1,10 @@
+.standard{
+    width: 100%;
+    padding: 0 10px;
+}
+.swiper-button-next {
+    right: 50px;
+}
+.swiper-button-prev {
+    left: 50px;
+}
