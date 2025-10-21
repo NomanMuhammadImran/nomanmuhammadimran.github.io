@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/styles/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Site main content -->
+    <div class="main-container">
+        <nav class="site-nav">
+
+        </nav>
+        <div class="container-fluid d-flex px-0">
+            <!-- Sidebar -->
+            <aside class="sidebar collapsed">
+                <!-- Sidebar header -->
+                <div class="sidebar-header">
+                    <img src="./assets/images/spark-logo.png" alt="CodingNepal" class="header-logo" />
+                    <button class="sidebar-toggle">
+                        <span class="material-symbols-rounded">chevron_left</span>
+                    </button>
+                </div>
+                <div class="sidebar-content">
+                    <!-- Search Form -->
+                    <form action="#" class="search-form">
+                        <span class="material-symbols-rounded">search</span>
+                        <input type="search" placeholder="Search..." required />
+                    </form>
+                    <!-- Sidebar Menu -->
+                    <ul class="menu-list">
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/bookmark-icon.svg" alt="bookmark-icon">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Book Mark</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/dashboard-icon.svg" alt="dashboard-icon">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/user-add.svg" alt="dashboard-icon">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Add User</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/user-group-icon.svg" alt="dashboard-icon">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Teams</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/maximize-screen.svg" alt="maximize-screen">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Maximize Screen</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/calendar-icon-2.svg" alt="calendar-icon-2">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Calendar</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/discount-tag-1.svg" alt="discount-tag-1">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Discount Tag</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/note-icon-4.svg" alt="note-icon-4">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Notes</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/ranking-icon.svg" alt="ranking-icon">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Ranks</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/message-icon-1.svg" alt="message-icon-1">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Chat</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/analytics-icon-1.svg" alt="analytics-icon-1">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Analytics</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/settings-icon.svg" alt="settings-icon">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">Setting</span>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="#" class="menu-link">
+                                <div class="d-flex align-items-center gap-2">
+                                    <img src="./assets/images/more-less-icon.svg" alt="more-less-icon">
+                                    <img src="./assets/images/arrow-down-icon.svg" alt="bookmark-icon">
+                                </div>
+                                <span class="menu-label">More & Less</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+            <!-- Main Content -->
+            <div class="main-content">
+                <!-- Header -->
+                <div class="header">
+                    <div class="search-sidearrow">
+                        <button class="sidebar-toggle">
+                            <span class="material-symbols-rounded">menu</span>
+                        </button>
+                        <input type="text" class="search-box" placeholder="Search invoices...">
+                    </div>
+                    <div class="header-right">
+                        <div class="header-icons">
+                            <a href="javascript:;">
+                                <img src="./assets/images/user-add-icon.svg" alt="user-add-icon">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/user-group.svg" alt="user-group">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/discount-icon.svg" alt="discount-icon">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/calendar-icon-1.svg" alt="calendar-icon-1">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/agreement-icon.svg" alt="agreement-icon">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/message-icon.svg" alt="message-icon">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/task-icon-1.svg" alt="task-icon-1">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/help-icon.svg" alt="help-icon">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/notification-icon.svg" alt="notification-icon">
+                            </a>
+                            <a href="javascript:;">
+                                <img src="./assets/images/clock-icon.svg" alt="clock-icon">
+                            </a>
+                        </div>
+                        <div class="dark-mode-icon-main">
+                            <a class="active" href="">
+                                <img src="./assets/images/moon-icon.svg" alt="moon-icon">
+                            </a>
+                            <a href="">
+                                <img src="./assets/images/sun-icon.svg" alt="sun-icon">
+                            </a>
+                        </div>
+                        <div class="user-profile">
+                            <img src="./assets/images/user-img.png" alt="user-img">
+                            <!-- <div class="user-avatar">SN</div> -->
+                            <span class="user-name">Savannah Nguyen</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3 px-0">
+                            <div class="profile-panel-sticky">
+                                <div class="profile-panel">
+                                    <div class="profile-img">
+                                        <img src="./assets/images/profile-img.png" alt="profile-img">
+                                        <div class="camera-img">
+                                            <img src="./assets/images/camera-icon.svg" alt="camera-icon">
+                                        </div>
+                                    </div>
+
+                                    <div class="profile-name">Max Hollaway</div>
+                                    <div class="quick-button-main">
+                                        <a href="javascript:;" class="personal-toggle profile-btn primary mb-3">
+                                            <img src="./assets/images/quick-action-hand.svg" alt="quick-action-hand">
+                                            Quick Actions
+                                            <img src="./assets/images/arrow-down.svg" alt="arrow-down">
+                                        </a>
+                                        <div>
+                                            <div class="profile-buttons">
+                                                <a href="javascript:;" class="profile-btn secondary">
+                                                    <img src="./assets/images/credit-card.svg" alt="credit-card">
+                                                    Add Credit
+                                                </a>
+                                                <a href="javascript:;" class="profile-btn secondary">
+                                                    <img src="./assets/images/workout-run.svg" alt="">
+                                                    Create Workout
+                                                </a>
+                                            </div>
+                                            <div class="profile-buttons">
+                                                <a href="javascript:;" class="profile-btn secondary">
+                                                    <img src="./assets/images/show-fitness.svg" alt="show-fitness">
+                                                    Show Fitness
+                                                </a>
+                                                <a href="javascript:;" class="profile-btn secondary">
+                                                    <img src="./assets/images/bar-code-printer.svg"
+                                                        alt="bar-code-printer">
+                                                    Bar Code Print
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="personal-information-main">
+                                        <div class="personal-toggle personal-header">
+                                            <span>
+                                                <img src="./assets/images/arrow-down-round.svg" alt="arrow-down-round">
+                                                Personal Info
+                                            </span>
+                                            <span>
+                                                <img src="./assets/images/pencil-edit.svg" alt="pencil-edit">
+                                            </span>
+                                        </div>
+                                        <div class="personal-body">
+                                            <ul>
+                                                <li>
+                                                    <span>Pronunciation</span>
+                                                    <span>
+                                                        <img src="./assets/images/volume-speaker.svg"
+                                                            alt="volume-speaker">
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>Using Student App</span>
+                                                    <span>
+                                                        <img src="./assets/images/smart-phone.svg" alt="smart-phone">
+                                                        No
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>Mobile Phone</span>
+                                                    <span>
+                                                        <img src="./assets/images/smart-phone.svg" alt="smart-phone">
+                                                        (473) 555-0927
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>Mobile Phone #2</span>
+                                                    <span class="blue">
+                                                        <img src="./assets/images/add-circle.svg" alt="add-circle">
+                                                        add new Phone
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>Email Address</span>
+                                                    <span class="blue">
+                                                        <img src="./assets/images/mail-box.svg" alt="mail-box">
+                                                        izzy@gmail.com
+                                                    </span>
+                                                </li>
+                                                <li>
+                                                    <span>Email Address #2</span>
+                                                    <span class="blue">
+                                                        <img src="./assets/images/add-circle.svg" alt="add-circle">
+                                                        add new Email
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="personal-information-main">
+                                        <div class="personal-toggle personal-header">
+                                            <span>
+                                                <img src="./assets/images/arrow-down-round.svg" alt="arrow-down-round">
+                                                Tag
+                                            </span>
+                                            <span>
+                                                <img src="./assets/images/add-tag.svg" alt="add-tag">
+                                            </span>
+                                        </div>
+
+                                        <div class="tags-section">
+                                            <span class="tag"><img src="./assets/images/tag-icon.svg" alt="tag-icon">
+                                                #service-hours</span>
+                                            <span class="tag"><img src="./assets/images/tag-icon.svg" alt="tag-icon">
+                                                #internet-appointment</span>
+                                            <span class="tag"><img src="./assets/images/tag-icon.svg" alt="tag-icon">
+                                                #service-roaming</span>
+                                            <span class="tag"><img src="./assets/images/tag-icon.svg" alt="tag-icon">
+                                                #interested-in-single</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-9 px-0">
+                            <div class="tab-main">
+                                <!-- Tabs -->
+                                <div id="myTab" role="tablist" class="tabs-container">
+                                    <div id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" role="tab"
+                                        aria-controls="profile" aria-selected="false" class="tab-item">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20"
+                                                viewBox="0 0 21 20" fill="none">
+                                                <path d="M12.167 7.49988H15.5003" stroke="#B0B0B0" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                                <path d="M12.167 10.4165H14.667" stroke="#B0B0B0" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                                <rect x="2.16699" y="2.49988" width="16.6667" height="15" rx="3"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linejoin="round" />
+                                                <path
+                                                    d="M4.66699 13.3332C5.67392 11.1823 9.42714 11.0407 10.5003 13.3332"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M9.25033 7.49992C9.25033 8.42039 8.50413 9.16659 7.58366 9.16659C6.66318 9.16659 5.91699 8.42039 5.91699 7.49992C5.91699 6.57944 6.66318 5.83325 7.58366 5.83325C8.50413 5.83325 9.25033 6.57944 9.25033 7.49992Z"
+                                                    stroke="#B0B0B0" stroke-width="1.5" />
+                                            </svg>
+                                        </span>
+                                        Profile
+                                    </div>
+                                    <div id="notes-tab" data-bs-toggle="tab" data-bs-target="#notes"
+                                        aria-controls="notes" aria-selected="false" class="tab-item">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M14.1663 1.66663V3.33329M9.99967 1.66663V3.33329M5.83301 1.66663V3.33329"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M2.9165 8.33333C2.9165 5.58347 2.9165 4.20854 3.77078 3.35427C4.62505 2.5 5.99998 2.5 8.74984 2.5H11.2498C13.9997 2.5 15.3746 2.5 16.2289 3.35427C17.0832 4.20854 17.0832 5.58347 17.0832 8.33333V12.5C17.0832 15.2499 17.0832 16.6248 16.2289 17.4791C15.3746 18.3333 13.9997 18.3333 11.2498 18.3333H8.74984C5.99998 18.3333 4.62505 18.3333 3.77078 17.4791C2.9165 16.6248 2.9165 15.2499 2.9165 12.5V8.33333Z"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M6.6665 12.4999H9.99984M6.6665 8.33325H13.3332"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round" />
+                                            </svg>
+                                        </span>
+                                        Notes
+                                    </div>
+                                    <div id="communication-tab" data-bs-toggle="tab" data-bs-target="#communication"
+                                        role="tab" aria-controls="communication" aria-selected="false" class="tab-item">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_3685_5215)">
+                                                    <path
+                                                        d="M16.6665 7.49996C16.0039 4.17875 12.9272 1.66663 9.23255 1.66663C5.05441 1.66663 1.6665 4.8793 1.6665 8.84166C1.6665 10.7454 2.44833 12.4753 3.72363 13.759C4.00441 14.0416 4.19188 14.4278 4.11622 14.8252C3.99136 15.475 3.70838 16.0812 3.29404 16.5864C4.38419 16.7874 5.51773 16.6064 6.48985 16.0939C6.83349 15.9128 7.00531 15.8222 7.12656 15.8038C7.21144 15.791 7.322 15.803 7.49984 15.8335"
+                                                        stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M9.1665 13.5514C9.1665 15.9728 11.2188 17.9361 13.7498 17.9361C14.0474 17.9365 14.3442 17.909 14.6365 17.8541C14.8469 17.8146 14.9521 17.7948 15.0256 17.806C15.099 17.8172 15.2031 17.8726 15.4113 17.9833C16.0002 18.2965 16.6869 18.4071 17.3472 18.2842C17.0962 17.9755 16.9248 17.6051 16.8492 17.208C16.8034 16.9651 16.9169 16.7291 17.087 16.5564C17.8596 15.7719 18.3332 14.7148 18.3332 13.5514C18.3332 11.1299 16.2809 9.16663 13.7498 9.16663C11.2188 9.16663 9.1665 11.1299 9.1665 13.5514Z"
+                                                        stroke="#B0B0B0" stroke-width="1.5" stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_3685_5215">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        Communication
+                                    </div>
+                                    <div id="workouts-tab" data-bs-toggle="tab" data-bs-target="#workouts" role="tab"
+                                        aria-controls="workouts" aria-selected="false" class="tab-item">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                viewBox="0 0 24 24" fill="none">
+                                                <path
+                                                    d="M17 4.5C17 5.32843 16.3284 6 15.5 6C14.6716 6 14 5.32843 14 4.5C14 3.67157 14.6716 3 15.5 3C16.3284 3 17 3.67157 17 4.5Z"
+                                                    stroke="#B0B0B0" stroke-width="1.5" />
+                                                <path
+                                                    d="M15 21.0008L14.3359 18.3848C14.1161 17.5191 13.6615 16.7284 13.0207 16.0974L11.5 14.5998M11.5 14.5998C10.4922 13.8059 9.98834 13.409 9.79313 12.8784C9.70617 12.642 9.66463 12.3914 9.67069 12.1397C9.68429 11.5745 10.0332 11.0362 10.7309 9.95956L12 8.00136M11.5 14.5998L15 9.27743M6 11.1534C7 9.18366 8.53767 8.0423 12 8.00136M12 8.00136C12.2186 7.99877 12.5444 7.99799 12.8698 7.99805C13.3747 7.99813 13.6271 7.99818 13.8282 8.09214C14.0293 8.18609 14.2356 8.43256 14.6482 8.92548C14.7664 9.06672 14.8878 9.19326 15 9.27743M15 9.27743C16.1547 10.1433 17.9627 10.4921 20 8.19913"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path
+                                                    d="M4 17.7303L4.67822 17.8916C6.40663 18.3028 8.20324 17.5164 9 16"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        Workouts
+                                    </div>
+                                    <div id="attendance-tab" data-bs-toggle="tab" data-bs-target="#attendance"
+                                        role="tab" aria-controls="attendance" aria-selected="false" class="tab-item">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path
+                                                    d="M2.9165 7.80698C2.9165 4.91239 2.9165 3.46509 3.77078 2.56586C4.62505 1.66663 5.99998 1.66663 8.74984 1.66663H11.2498C13.9997 1.66663 15.3746 1.66663 16.2289 2.56586C17.0832 3.46509 17.0832 4.91239 17.0832 7.80698V12.1929C17.0832 15.0875 17.0832 16.5348 16.2289 17.4341C15.3746 18.3333 13.9997 18.3333 11.2498 18.3333H8.74984C5.99998 18.3333 4.62505 18.3333 3.77078 17.4341C2.9165 16.5348 2.9165 15.0875 2.9165 12.1929V7.80698Z"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M11.25 9.16663H14.1667" stroke="#B0B0B0" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                                <path
+                                                    d="M5.83301 9.99992C5.83301 9.99992 6.24967 9.99992 6.66634 10.8333C6.66634 10.8333 7.98987 8.74992 9.16634 8.33325"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M11.25 14.1666H14.1667" stroke="#B0B0B0" stroke-width="1.5"
+                                                    stroke-linecap="round" />
+                                                <path
+                                                    d="M6.6665 1.66663L6.735 2.07762C6.90129 3.07533 6.98443 3.57418 7.33411 3.8704C7.68379 4.16663 8.18952 4.16663 9.20099 4.16663H10.7987C11.8101 4.16663 12.3159 4.16663 12.6656 3.8704C13.0152 3.57418 13.0984 3.07533 13.2647 2.07762L13.3332 1.66663"
+                                                    stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                                <path d="M6.6665 14.1666H7.49984" stroke="#B0B0B0" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </span>
+                                        Attendance
+                                    </div>
+                                    <div id="invoice-tab" data-bs-toggle="tab" data-bs-target="#invoice" role="tab"
+                                        aria-controls="invoice" aria-selected="true" class="tab-item active">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_3685_5227)">
+                                                    <path class="invoice-path"
+                                                        d="M4.09984 14.1666C4.09984 14.6637 4.50278 15.0666 4.99984 15.0666C5.49689 15.0666 5.89984 14.6637 5.89984 14.1666H4.99984H4.09984ZM17.6009 2.39886L18.2373 1.76246V1.76246L17.6009 2.39886ZM13.5017 15.8205L14.3795 15.6219V15.6219L13.5017 15.8205ZM1.81037 15.8205L0.932554 16.0191H0.932554L1.81037 15.8205ZM1.82856 14.4796L2.53097 15.0423L1.82856 14.4796ZM9.99984 1.66663V2.56663H13.3332V1.66663V0.766626H9.99984V1.66663ZM18.3332 6.66663H17.4332V15H18.3332H19.2332V6.66663H18.3332ZM4.99984 14.1666H5.89984V6.66663H4.99984H4.09984V14.1666H4.99984ZM9.99984 1.66663V0.766626C8.84677 0.766626 7.89143 0.764715 7.13673 0.866181C6.35615 0.971127 5.65688 1.20125 5.09567 1.76246L5.73207 2.39886L6.36847 3.03526C6.53949 2.86423 6.7956 2.72824 7.37658 2.65013C7.98346 2.56854 8.79588 2.56663 9.99984 2.56663V1.66663ZM4.99984 6.66663H5.89984C5.89984 5.46267 5.90175 4.65024 5.98334 4.04337C6.06145 3.46238 6.19744 3.20628 6.36847 3.03526L5.73207 2.39886L5.09567 1.76246C4.53447 2.32367 4.30434 3.02294 4.19939 3.80352C4.09793 4.55822 4.09984 5.51356 4.09984 6.66663H4.99984ZM13.3332 1.66663V2.56663C14.5371 2.56663 15.3496 2.56854 15.9564 2.65013C16.5374 2.72824 16.7935 2.86423 16.9645 3.03526L17.6009 2.39886L18.2373 1.76246C17.6761 1.20125 16.9769 0.971127 16.1963 0.866181C15.4416 0.764715 14.4862 0.766626 13.3332 0.766626V1.66663ZM18.3332 6.66663H19.2332C19.2332 5.51356 19.2351 4.55822 19.1336 3.80352C19.0287 3.02294 18.7985 2.32367 18.2373 1.76246L17.6009 2.39886L16.9645 3.03525C17.1356 3.20628 17.2716 3.46238 17.3497 4.04337C17.4313 4.65024 17.4332 5.46267 17.4332 6.66663H18.3332ZM18.3332 15H17.4332C17.4332 15.8376 17.2787 16.4687 17.0198 16.8633C16.7991 17.1997 16.4632 17.4333 15.8279 17.4333V18.3333V19.2333C17.0374 19.2333 17.9541 18.7207 18.5249 17.8506C19.0574 17.0389 19.2332 16.0033 19.2332 15H18.3332ZM15.8279 18.3333V17.4333C15.4829 17.4333 15.2186 17.2943 14.9815 17.0067C14.7233 16.6935 14.5135 16.2141 14.3795 15.6219L13.5017 15.8205L12.6239 16.0191C12.7929 16.7664 13.0911 17.5434 13.5926 18.1517C14.1152 18.7856 14.8625 19.2333 15.8279 19.2333V18.3333ZM4.13659 18.3333V17.4333C3.79164 17.4333 3.52733 17.2943 3.29017 17.0067C3.03197 16.6935 2.82216 16.2141 2.68818 15.6219L1.81037 15.8205L0.932554 16.0191C1.10163 16.7664 1.39976 17.5434 1.90133 18.1517C2.42393 18.7856 3.1712 19.2333 4.13659 19.2333V18.3333ZM4.13659 18.3333V19.2333H15.8279V18.3333V17.4333H4.13659V18.3333ZM3.3015 14.1666V15.0666H11.6524V14.1666V13.2666H3.3015V14.1666ZM1.81037 15.8205L2.68818 15.6219C2.64838 15.4459 2.61848 15.3132 2.59696 15.1991C2.57546 15.0851 2.56815 15.0187 2.56675 14.9788C2.56549 14.943 2.56997 14.9502 2.56149 14.979C2.55164 15.0125 2.5361 15.0359 2.53097 15.0423L1.82856 14.4796L1.12615 13.9169C0.840314 14.2737 0.75445 14.6615 0.767863 15.0421C0.778951 15.3568 0.862609 15.7099 0.932554 16.0191L1.81037 15.8205ZM3.3015 14.1666V13.2666C2.92544 13.2666 2.5316 13.2637 2.20573 13.318C1.83112 13.3803 1.4331 13.5338 1.12615 13.9169L1.82856 14.4796L2.53097 15.0423C2.51428 15.0631 2.48698 15.086 2.45924 15.1002C2.43893 15.1106 2.44341 15.1032 2.50128 15.0935C2.56124 15.0836 2.65071 15.0755 2.79094 15.0711C2.93071 15.0667 3.09366 15.0666 3.3015 15.0666V14.1666ZM13.5017 15.8205L14.3795 15.6219C14.2863 15.2099 14.2034 14.8392 14.1103 14.5529C14.022 14.281 13.874 13.9098 13.5426 13.6455L12.9814 14.349L12.4201 15.0526C12.3174 14.9707 12.3323 14.9056 12.3984 15.1089C12.4598 15.2979 12.5226 15.5717 12.6239 16.0191L13.5017 15.8205ZM11.6524 14.1666V15.0666C12.0396 15.0666 12.2574 15.0679 12.4099 15.0843C12.5532 15.0997 12.5014 15.1175 12.4201 15.0526L12.9814 14.349L13.5426 13.6455C13.2326 13.3982 12.8832 13.3248 12.6025 13.2946C12.3311 13.2654 11.9987 13.2666 11.6524 13.2666V14.1666Z"
+                                                        fill="#B0B0B0" />
+                                                    <path d="M8.75 5.83325H14.5833" stroke="#B0B0B0" stroke-width="1.8"
+                                                        stroke-linecap="round" />
+                                                    <path d="M8.75 9.16663H11.6667" stroke="#B0B0B0" stroke-width="1.8"
+                                                        stroke-linecap="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_3685_5227">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        Invoice
+                                    </div>
+                                    <div id="ranks-tab" data-bs-toggle="tab" data-bs-target="#ranks" role="tab"
+                                        aria-controls="ranks" aria-selected="false" class="tab-item">
+                                        <span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <g clip-path="url(#clip0_3685_5230)">
+                                                    <path
+                                                        d="M2.91699 15.0001C2.91699 13.8216 2.91699 13.2324 3.28311 12.8662C3.64923 12.5001 4.23848 12.5001 5.41699 12.5001H5.83366C6.61933 12.5001 7.01217 12.5001 7.25625 12.7442C7.50033 12.9883 7.50033 13.3811 7.50033 14.1668V18.3335H2.91699V15.0001Z"
+                                                        stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M12.5 15.8334C12.5 15.0477 12.5 14.6549 12.7441 14.4108C12.9882 14.1667 13.381 14.1667 14.1667 14.1667H14.5833C15.7618 14.1667 16.3511 14.1667 16.7172 14.5329C17.0833 14.899 17.0833 15.4882 17.0833 16.6667V18.3334H12.5V15.8334Z"
+                                                        stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path d="M1.66699 18.3334H18.3337" stroke="#B0B0B0"
+                                                        stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M7.5 13.3335C7.5 12.155 7.5 11.5657 7.86612 11.1996C8.23223 10.8335 8.82149 10.8335 10 10.8335C11.1785 10.8335 11.7678 10.8335 12.1339 11.1996C12.5 11.5657 12.5 12.155 12.5 13.3335V18.3335H7.5V13.3335Z"
+                                                        stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                    <path
+                                                        d="M10.5762 2.14814L11.1628 3.33104C11.2428 3.4957 11.4561 3.65365 11.6361 3.68389L12.6993 3.862C13.3792 3.97626 13.5392 4.47361 13.0493 4.96425L12.2227 5.79765C12.0827 5.93879 12.006 6.211 12.0494 6.4059L12.286 7.43758C12.4727 8.25418 12.0427 8.57007 11.3261 8.14329L10.3296 7.54848C10.1496 7.44094 9.85295 7.44094 9.66964 7.54848L8.67308 8.14329C7.95983 8.57007 7.52654 8.25082 7.71319 7.43758L7.94983 6.4059C7.99316 6.211 7.9165 5.93879 7.77651 5.79765L6.94994 4.96425C6.46333 4.47361 6.61997 3.97626 7.2999 3.862L8.36312 3.68389C8.53976 3.65365 8.75307 3.4957 8.83306 3.33104L9.41967 2.14814C9.73963 1.50628 10.2596 1.50628 10.5762 2.14814Z"
+                                                        stroke="#B0B0B0" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </g>
+                                                <defs>
+                                                    <clipPath id="clip0_3685_5230">
+                                                        <rect width="20" height="20" fill="white" />
+                                                    </clipPath>
+                                                </defs>
+                                            </svg>
+                                        </span>
+                                        Ranks
+                                    </div>
+                                </div>
+                                <!-- Content -->
+                                <div class="tab-content" id="myTabContent">
+                                    <div class="tab-pane fade" id="profile" role="tabpanel"
+                                        aria-labelledby="profile-tab">
+                                        <div class="not-record-text">Record Not Found! </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="notes" role="tabpanel" aria-labelledby="notes-tab">
+                                        <div class="not-record-text">Record Not Found! </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="communication" role="tabpanel"
+                                        aria-labelledby="communication-tab">
+                                        <div class="not-record-text">Record Not Found! </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="workouts" role="tabpanel"
+                                        aria-labelledby="workouts-tab">
+                                        <div class="not-record-text">Record Not Found! </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="attendance" role="tabpanel"
+                                        aria-labelledby="attendance-tab">
+                                        <div class="not-record-text">Record Not Found! </div>
+                                    </div>
+                                    <div class="tab-pane fade show active" id="invoice" role="tabpanel"
+                                        aria-labelledby="invoice-tab">
+                                        <div class="content">
+                                            <!-- Stats Cards -->
+                                            <div class="scroll-main-stats">
+                                                <div class="stats-grid">
+                                                    <div class="stat-card email-sent">
+                                                        <div class="stat-card-flex">
+                                                            <div>
+                                                                <div class="stat-label">Email Sent</div>
+                                                                <div class="stat-change">Last 60 days</div>
+                                                            </div>
+                                                            <div class="stats-icon-box">
+                                                                <img src="./assets/images/email-icon.svg"
+                                                                    alt="email-icon">
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat-value">6</div>
+                                                        <div class="stat-card-flex">
+                                                            <div class="stat-change">Opened:1</div>
+                                                            <div class="stat-change">Bounce:1</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="stat-card appointment">
+                                                        <div class="stat-card-flex">
+                                                            <div>
+                                                                <div class="stat-label">Appointment Booked</div>
+                                                                <!-- <div class="stat-change">Last 30</div> -->
+                                                            </div>
+                                                            <div class="stats-icon-box">
+                                                                <img style="width: 26px; height: 26px;"
+                                                                    src="./assets/images/book-icon.svg" alt="book-icon">
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat-value">6</div>
+                                                        <div class="stat-card-flex">
+                                                            <div class="stat-change">Showed: 0</div>
+                                                            <div class="stat-change">No show: 0</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="stat-card attendance">
+                                                        <div class="stat-card-flex">
+                                                            <div>
+                                                                <div class="stat-label">Total Attendance</div>
+                                                                <!-- <div class="stat-change">Last 30</div> -->
+                                                            </div>
+                                                            <div class="stats-icon-box">
+                                                                <img src="./assets/images/calendar-icon.svg"
+                                                                    alt="calendar-icon">
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat-value">81</div>
+                                                        <div class="stat-card-flex">
+                                                            <div class="stat-change">Last 7 <br /> Days: 3</div>
+                                                            <div class="stat-change">Last 30 <br /> Days: 21</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="stat-card tasks">
+                                                        <div class="stat-card-flex">
+                                                            <div>
+                                                                <div class="stat-label">Tasks</div>
+                                                                <!-- <div class="stat-change">Last 30</div> -->
+                                                            </div>
+                                                            <div class="stats-icon-box">
+                                                                <img src="./assets/images/task-icon.svg"
+                                                                    alt="task-icon">
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat-value">3</div>
+                                                        <div class="stat-card-flex">
+                                                            <div class="stat-change">Completed: 3</div>
+                                                            <div class="stat-change">Overdue: 3</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="stat-card invoices">
+                                                        <div class="stat-card-flex">
+                                                            <div>
+                                                                <div class="stat-label">Invoices</div>
+                                                                <!-- <div class="stat-change">3</div> -->
+                                                            </div>
+                                                            <div class="stats-icon-box">
+                                                                <img src="./assets/images/invoice-icon.svg"
+                                                                    alt="invoice-icon">
+                                                            </div>
+                                                        </div>
+                                                        <div class="stat-value">3</div>
+                                                        <div class="stat-card-flex">
+                                                            <div class="stat-change">Completed: 3</div>
+                                                            <div class="stat-change">Overdue: 3</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="invoice-head-main">
+                                                <!-- Invoice Section Header -->
+                                                <div class="invoice-section-header">
+                                                    <div class="section-title"><span>Invoices / Payments</span>
+                                                        <p>45 Invoices</p>
+                                                    </div>
+                                                    <button class="btn-payment">
+                                                        <img src="./assets/images/printer-icon.svg" alt="printer-icon">
+                                                        Print
+                                                        Payments
+                                                    </button>
+                                                </div>
+                                                <div class="invoice-body">
+                                                    <!-- Filter Buttons -->
+                                                    <div class="filter-buttons">
+                                                        <button class="filter-btn active">All status</button>
+                                                        <button class="filter-btn">Only Paid</button>
+                                                        <button class="filter-btn">Only Paid</button>
+                                                    </div>
+
+                                                    <!-- Invoice Table -->
+                                                    <div class="table-responsive">
+                                                        <table class="invoice-table">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Date</th>
+                                                                    <th>Invoice Summary</th>
+                                                                    <th>Amount Paid</th>
+                                                                    <th>Amount Owed</th>
+                                                                    <th>Action</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="invoice-date">12/17/2024</div>
+                                                                        <div class="invoice-date">11:23am</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="invoice-details">Qty 1: Sparring
+                                                                            Gloves
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: Black
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: White
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details-small-bold">
+                                                                            Payments</div>
+                                                                        <div class="invoice-details-small">CC
+                                                                            Terminal 10/2/2024
+                                                                            -
+                                                                            Amt
+                                                                            $255.44
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="amount">$355.68</td>
+                                                                    <td class="amount">$0.00</td>
+                                                                    <td><button class="view-btn">View</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="invoice-date">12/17/2024</div>
+                                                                        <div class="invoice-date">04:30am</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="invoice-details">Qty 1: Black
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details-small">No
+                                                                            payments found
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="amount">$0.00</td>
+                                                                    <td class="amount">$21.67</td>
+                                                                    <td><button class="view-btn">View</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="invoice-date">12/10/2024</div>
+                                                                        <div class="invoice-date">03:51am</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="invoice-details">Qty 1: Century
+                                                                            Mouth Guard:
+                                                                            Black
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: Black
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: White
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details-small-bold">
+                                                                            Payments</div>
+                                                                        <div class="invoice-details-small">CC
+                                                                            Terminal
+                                                                            10/10/2024 -
+                                                                            Amt
+                                                                            $276.36
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="amount">$331.11</td>
+                                                                    <td class="amount">$0.00</td>
+                                                                    <td><button class="view-btn">View</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="invoice-date">12/10/2024</div>
+                                                                        <div class="invoice-date">03:51am</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="invoice-details">Qty 1: Century
+                                                                            Mouth Guard:
+                                                                            Black
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: Black
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: White
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details-small-bold">
+                                                                            Payments</div>
+                                                                        <div class="invoice-details-small">CC
+                                                                            Terminal
+                                                                            10/10/2024 -
+                                                                            Amt
+                                                                            $276.36
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="amount">$331.11</td>
+                                                                    <td class="amount">$0.00</td>
+                                                                    <td><button class="view-btn">View</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="invoice-date">12/10/2024</div>
+                                                                        <div class="invoice-date">03:51am</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="invoice-details">Qty 1: Century
+                                                                            Mouth Guard:
+                                                                            Black
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: Black
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: White
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details-small-bold">
+                                                                            Payments</div>
+                                                                        <div class="invoice-details-small">CC
+                                                                            Terminal
+                                                                            10/10/2024 -
+                                                                            Amt
+                                                                            $276.36
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="amount">$331.11</td>
+                                                                    <td class="amount">$0.00</td>
+                                                                    <td><button class="view-btn">View</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="invoice-date">12/10/2024</div>
+                                                                        <div class="invoice-date">03:51am</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="invoice-details">Qty 1: Century
+                                                                            Mouth Guard:
+                                                                            Black
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: Black
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: White
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details-small-bold">
+                                                                            Payments</div>
+                                                                        <div class="invoice-details-small">CC
+                                                                            Terminal
+                                                                            10/10/2024 -
+                                                                            Amt
+                                                                            $276.36
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="amount">$331.11</td>
+                                                                    <td class="amount">$0.00</td>
+                                                                    <td><button class="view-btn">View</button></td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>
+                                                                        <div class="invoice-date">12/10/2024</div>
+                                                                        <div class="invoice-date">03:51am</div>
+                                                                    </td>
+                                                                    <td>
+                                                                        <div class="invoice-details">Qty 1: Century
+                                                                            Mouth Guard:
+                                                                            Black
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: Black
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details">Qty 1: White
+                                                                            Hyper
+                                                                            T-Shirt(Small)
+                                                                            Size:
+                                                                            Small
+                                                                        </div>
+                                                                        <div class="invoice-details-small-bold">
+                                                                            Payments</div>
+                                                                        <div class="invoice-details-small">CC
+                                                                            Terminal
+                                                                            10/10/2024 -
+                                                                            Amt
+                                                                            $276.36
+                                                                        </div>
+                                                                    </td>
+                                                                    <td class="amount">$331.11</td>
+                                                                    <td class="amount">$0.00</td>
+                                                                    <td><button class="view-btn">View</button></td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+
+                                                    <!-- Pagination -->
+                                                    <div class="pagination-section">
+                                                        <div class="pagination-info">
+                                                            <span>Total Rows: <strong>8272.28</strong></span>
+                                                            <span>Total Owed: <strong>21.67</strong></span>
+                                                        </div>
+                                                        <div class="pagination-controls">
+                                                            <span class="pagination-nav">Prev</span>
+                                                            <button class="pagination-btn active">1</button>
+                                                            <button class="pagination-btn">2</button>
+                                                            <button class="pagination-btn">3</button>
+                                                            <button class="pagination-btn">...</button>
+                                                            <button class="pagination-btn">10</button>
+                                                            <span class="pagination-nav">Next</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="tab-pane fade" id="ranks" role="tabpanel" aria-labelledby="ranks-tab">
+                                        <div class="not-record-text">Record Not Found! </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script src="./assets/js/script.js"></script>
+
+    <script>
+        
+    </script>
+</body>
+
+</html>
