@@ -35,26 +35,6 @@ a {
 .main-container {
   display: flex;
   height: 100vh;
-  /* Responsive media query code for small screens */
-  /* .profile-role {
-      color: #8892a8;
-      font-size: 13px;
-      margin-bottom: 20px;
-      text-align: center;
-  } */
-  /* Main Content */
-  /* Header */
-  /* Tabs */
-  /* Content Area */
-  /* Stats Cards */
-  /* Invoice Section */
-  /* Filter Buttons */
-  /* .filter-btn:hover {
-      border-color: rgba(19, 118, 255, 1);
-      color: rgba(19, 118, 255, 1);
-  } */
-  /* Invoice Table */
-  /* Pagination */
 }
 .main-container .sidebar {
   position: sticky;
@@ -65,7 +45,6 @@ a {
   flex-shrink: 0;
   flex-direction: column;
   background: rgb(31, 33, 36);
-  /* border-right: 1px solid var(--color-border-hr); */
   box-shadow: 0 3px 9px rgb(31, 33, 36);
   transition: width 0.4s ease;
 }
@@ -90,7 +69,6 @@ a {
   position: relative;
   align-items: center;
   justify-content: space-between;
-  /* border-bottom: 1px solid var(--color-border-hr); */
 }
 .main-container .sidebar .sidebar-header .header-logo {
   width: 46px;
@@ -367,8 +345,6 @@ a {
   border-right: 1px solid rgb(26, 27, 38);
   overflow-y: auto;
   display: block;
-  /* height: calc(100% - 25px);
-    margin-bottom: 25px; */
 }
 .main-container .profile-name {
   font-size: 28px;
@@ -860,7 +836,7 @@ a {
   background-position: center;
 }
 .main-container .stat-card.invoices {
-  background-image: url("assets/images/invoice-bg.png");
+  background-image: url("../../images/invoice-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -949,11 +925,6 @@ a {
   padding: 20px;
   background: #21222D;
 }
-@media screen and (max-width: 767px) {
-  .main-container .invoice-section-header {
-    /* justify-content: center; */
-  }
-}
 .main-container .section-title span {
   font-size: 18px;
   font-weight: 600;
@@ -988,7 +959,6 @@ a {
 .main-container .invoice-head-main {
   background: #1A1B26;
   border: solid 1px #3A3A45;
-  /* padding: 0 20px 20px 20px; */
   border-radius: 8px;
 }
 .main-container .invoice-head-main .invoice-body {
@@ -1212,4 +1182,3 @@ a {
   top: 0;
 }
 
-/*# sourceMappingURL=style.css.map */
