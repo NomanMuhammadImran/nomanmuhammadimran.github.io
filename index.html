@@ -692,7 +692,8 @@
                         <div class="ci-icon"><i class="ti ti-mail"></i></div>
                         <div>
                             <div class="ci-label">Email</div>
-                            <div class="ci-val">nomiimran1000@gmail.com</div>
+                            <a href="mailto:nomiimran1000@gmail.com" target="_blank"
+                                class="ci-val">nomiimran1000@gmail.com</a>
                         </div>
                     </div>
 
@@ -700,7 +701,7 @@
                         <div class="ci-icon"><i class="ti ti-phone"></i></div>
                         <div>
                             <div class="ci-label">Phone / WhatsApp</div>
-                            <div class="ci-val">(+92) 313-124-1770</div>
+                            <a href="" target="_blank" class="ci-val">(+92) 313-124-1770</a>
                         </div>
                     </div>
 
@@ -721,10 +722,12 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="#" class="slink" title="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
-                        <a href="#" class="slink" title="GitHub"><i class="ti ti-brand-github"></i></a>
-                        <a href="#" class="slink" title="Upwork"><i class="ti ti-briefcase"></i></a>
-                        <a href="#" class="slink" title="WhatsApp"><i class="ti ti-brand-whatsapp"></i></a>
+                        <a href="#" class="slink" target="_blank" title="LinkedIn"><i
+                                class="ti ti-brand-linkedin"></i></a>
+                        <a href="#" class="slink" target="_blank" title="GitHub"><i class="ti ti-brand-github"></i></a>
+                        <a href="#" class="slink" target="_blank" title="Upwork"><i class="ti ti-briefcase"></i></a>
+                        <a href="#" class="slink" target="_blank" title="WhatsApp"><i
+                                class="ti ti-brand-whatsapp"></i></a>
                     </div>
                 </div>
 
@@ -752,6 +755,34 @@
     <!-- ═══════════════════════════ SCRIPTS ═════════════════════════ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        if (window.innerWidth > 992) {
+            const script = document.createElement('script');
+            script.src = 'https://unpkg.com/lenis@1.1.13/dist/lenis.min.js';
+
+            script.onload = () => {
+                const lenis = new Lenis({
+                    lerp: 0.8,
+                    duration: 2,
+                    smoothWheel: true,
+                    smoothTouch: false,
+                    infinite: false,
+
+                    // ðŸ‘‡ IMPORTANT: modal & sidebar ko ignore karega
+                    prevent: (node) => {
+                        return node.closest('.navbar-collapse');
+                    }
+                });
+
+                // animation loop
+                function raf(time) {
+                    lenis.raf(time);
+                    requestAnimationFrame(raf);
+                }
+                requestAnimationFrame(raf);
+            };
+
+            document.head.appendChild(script);
+        }
         // ── Navbar scroll effect
         const nav = document.getElementById('mainNav');
         window.addEventListener('scroll', () => {

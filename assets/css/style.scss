@@ -14,6 +14,7 @@
     --accent2: #005F4B;
     --accent-glow: rgba(0, 245, 196, 0.18);
     --text: #E8EDF2;
+    --white: #fff;
     --muted: #6B7684;
     --border: rgba(255, 255, 255, 0.07);
     --card: #0F1318;
@@ -121,6 +122,7 @@ body::before {
         font-size: 22px;
         font-weight: 800;
         letter-spacing: -.5px;
+        color: var(--accent);
 
         span {
             color: var(--accent);
@@ -130,15 +132,15 @@ body::before {
     .nav-link {
         font-size: 13.5px;
         font-weight: 500;
-        color: var(--muted);
+        color: var(--accent);
         padding: 6px 14px !important;
-        border-radius: 30px;
+        border-radius: 5px;
         transition: color .2s, background .2s;
 
         &:hover,
         &.active {
-            color: var(--text);
-            background: var(--border);
+            color: var(--accent);
+            background: var(--muted);
         }
     }
 
@@ -978,6 +980,7 @@ footer {
         font-family: var(--font-head);
         font-weight: 700;
         font-size: 16px;
+        color: var(--accent);
 
         span {
             color: var(--accent);
