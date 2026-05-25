@@ -11,7 +11,8 @@
     <!-- Bootstrap 5 -->
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Tabler Icons -->
-    <link href="./assets/css/tabler-icons.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
     <!-- Google Fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
@@ -26,6 +27,7 @@
     <nav class="navbar navbar-expand-lg" id="mainNav">
         <div class="container">
             <a class="navbar-brand" href="#hero">NI<span>.</span></a>
+            <!-- <a class="navbar-brand" href="#hero"><img src="./assets/images/web-project/portfolio-logo.webp" alt="portfolio-logo"></a> -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -71,17 +73,21 @@
 
                     <div class="hero-stats d-flex gap-4 gap-md-5">
                         <div class="stat">
-                            <div class="num">3+</div>
+                            <div class="num" data-count="3">3+</div>
                             <div class="label">Years Experience</div>
                         </div>
+
                         <div class="divider"></div>
+
                         <div class="stat">
-                            <div class="num">20+</div>
+                            <div class="num" data-count="20">20+</div>
                             <div class="label">Projects Delivered</div>
                         </div>
+
                         <div class="divider"></div>
+
                         <div class="stat">
-                            <div class="num">100%</div>
+                            <div class="num" data-count="100">100%</div>
                             <div class="label">On-time Delivery</div>
                         </div>
                     </div>
@@ -186,7 +192,7 @@
                             <div class="al-icon"><i class="ti ti-mail"></i></div>
                             <div class="al-text">
                                 <div class="al-label">Email</div>
-                                <div class="al-val" style="font-size:13px">nomiimran1000@gmail.com</div>
+                                <a href="mailto:nomiimran1000@gmail.com" class="al-val" style="font-size:13px">nomiimran1000@gmail.com</a>
                             </div>
                         </div>
                     </div>
@@ -284,28 +290,28 @@
 
                         <div class="skill-item">
                             <div class="skill-top"><span class="skill-name">HTML5 &amp; CSS3</span><span
-                                    class="skill-pct">95%</span></div>
+                                    class="skill-pct">90%</span></div>
                             <div class="progress">
                                 <div class="progress-bar" data-width="95"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-top"><span class="skill-name">SCSS / Sass</span><span
-                                    class="skill-pct">90%</span></div>
+                                    class="skill-pct">85%</span></div>
                             <div class="progress">
                                 <div class="progress-bar" data-width="90"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-top"><span class="skill-name">Bootstrap 5</span><span
-                                    class="skill-pct">92%</span></div>
+                                    class="skill-pct">90%</span></div>
                             <div class="progress">
                                 <div class="progress-bar" data-width="92"></div>
                             </div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-top"><span class="skill-name">Tailwind CSS</span><span
-                                    class="skill-pct">88%</span></div>
+                                    class="skill-pct">75%</span></div>
                             <div class="progress">
                                 <div class="progress-bar" data-width="88"></div>
                             </div>
@@ -362,9 +368,9 @@
                         </div>
                         <div class="skill-item" style="margin-bottom:0">
                             <div class="skill-top"><span class="skill-name">WordPress Customization</span><span
-                                    class="skill-pct">78%</span></div>
+                                    class="skill-pct">50%</span></div>
                             <div class="progress">
-                                <div class="progress-bar" data-width="78"></div>
+                                <div class="progress-bar" data-width="50"></div>
                             </div>
                         </div>
                     </div>
@@ -376,8 +382,6 @@
                             <span class="stag">VS Code</span>
                             <span class="stag">Figma</span>
                             <span class="stag">Adobe XD</span>
-                            <span class="stag">Elementor</span>
-                            <span class="stag">WPBakery</span>
                             <span class="stag">npm</span>
                             <span class="stag">SEO basics</span>
                             <span class="stag">Chrome DevTools</span>
@@ -388,6 +392,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- ═══════════════════════════ PROJECTS ════════════════════════ -->
     <section id="projects" class="section-pad">
@@ -401,151 +406,428 @@
                 </p>
             </div>
 
-            <div class="row g-4">
+            <!-- FILTERS -->
+            <div class="project-filters reveal">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="agency">Agency</button>
+                <button class="filter-btn" data-filter="ecommerce">Ecommerce</button>
+                <button class="filter-btn" data-filter="businesswebsite">Business Website</button>
+                <button class="filter-btn" data-filter="oilgas">Oil & Gas</button>
+            </div>
 
-                <div class="col-md-6 col-lg-4 reveal">
+            <div class="row g-4 projects-row">
+
+                <!-- Ecommerce -->
+                <div class="col-md-6 col-lg-4 reveal project-item ecommerce">
                     <div class="project-card">
                         <div class="card-thumb">
-                            <div class="thumb-pattern"></div>
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/sslootah.webp" alt="sslootah">
+                            </div>
                             <i class="ti ti-shopping-cart thumb-icon"></i>
                             <span class="project-num">01</span>
                         </div>
                         <div class="card-body-custom">
-                            <div class="project-tags">
-                                <span class="ptag">HTML5</span><span class="ptag">SCSS</span><span
-                                    class="ptag">Bootstrap</span>
-                            </div>
-                            <div class="project-title">Ecommerce Store UI</div>
+                            <a href="https://sslootahtrading.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                                
+                            </a>
+                            <div class="project-title">SSLootah</div>
                             <div class="project-desc">
                                 Fully responsive ecommerce frontend with product listing, filters, cart UI, and checkout
-                                pages. Pixel-perfect Figma-to-HTML conversion with cross-browser compatibility.
-                            </div>
-                            <div class="card-footer-custom">
-                                <div style="display:flex;gap:6px;flex-wrap:wrap">
-                                    <span style="font-size:11px;color:var(--muted)">Responsive · SEO-ready · Clean
-                                        code</span>
-                                </div>
-                                <span class="view-link">View <i class="ti ti-arrow-right"></i></span>
+                                pages.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.1s">
+                <div class="col-md-6 col-lg-4 reveal project-item ecommerce">
                     <div class="project-card">
                         <div class="card-thumb">
-                            <div class="thumb-pattern"></div>
-                            <i class="ti ti-building-estate thumb-icon"></i>
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/amarancho.webp" alt="amarancho">
+                            </div>
+                            <i class="ti ti-shopping-cart thumb-icon"></i>
                             <span class="project-num">02</span>
                         </div>
                         <div class="card-body-custom">
-                            <div class="project-tags">
-                                <span class="ptag">Tailwind</span><span class="ptag">JS</span><span
-                                    class="ptag">Bootstrap</span>
-                            </div>
-                            <div class="project-title">Real Estate Platform</div>
+                            <a href="https://amarancho.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                                
+                            </a>
+                            <div class="project-title">Amarancho</div>
                             <div class="project-desc">
-                                Multi-page real estate website with property listings, search filters, interactive map
-                                sections, and agent profile pages. Mobile-first responsive design.
-                            </div>
-                            <div class="card-footer-custom">
-                                <span style="font-size:11px;color:var(--muted)">Mobile-first · Fast loading</span>
-                                <span class="view-link">View <i class="ti ti-arrow-right"></i></span>
+                                Fully responsive ecommerce frontend with product listing, filters, cart UI, and checkout
+                                pages.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.2s">
+                <div class="col-md-6 col-lg-4 reveal project-item ecommerce">
                     <div class="project-card">
                         <div class="card-thumb">
-                            <div class="thumb-pattern"></div>
-                            <i class="ti ti-brand-wordpress thumb-icon"></i>
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/amarantica.webp" alt="amarantica">
+                            </div>
+                            <i class="ti ti-shopping-cart thumb-icon"></i>
                             <span class="project-num">03</span>
                         </div>
                         <div class="card-body-custom">
-                            <div class="project-tags">
-                                <span class="ptag">WordPress</span><span class="ptag">CSS</span><span
-                                    class="ptag">Elementor</span>
-                            </div>
-                            <div class="project-title">WordPress Agency Site</div>
+                            <a href="https://amarantica.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Amarantica</div>
                             <div class="project-desc">
-                                Custom WordPress website for a digital agency with Elementor customizations, child theme
-                                development, responsive adjustments and performance optimizations.
-                            </div>
-                            <div class="card-footer-custom">
-                                <span style="font-size:11px;color:var(--muted)">SEO optimized · Custom theme</span>
-                                <span class="view-link">View <i class="ti ti-arrow-right"></i></span>
+                                Fully responsive ecommerce frontend with product listing, filters, cart UI, and checkout
+                                pages.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.05s">
+                <div class="col-md-6 col-lg-4 reveal project-item ecommerce">
                     <div class="project-card">
                         <div class="card-thumb">
-                            <div class="thumb-pattern"></div>
-                            <i class="ti ti-rocket thumb-icon"></i>
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/grandeur.webp" alt="grandeur">
+                            </div>
+                            <i class="ti ti-shopping-cart thumb-icon"></i>
                             <span class="project-num">04</span>
                         </div>
                         <div class="card-body-custom">
-                            <div class="project-tags">
-                                <span class="ptag">HTML5</span><span class="ptag">SCSS</span><span
-                                    class="ptag">Tailwind</span>
-                            </div>
-                            <div class="project-title">SaaS Landing Pages</div>
+                            <a href="https://www.grandeuruae.ae/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                                
+                            </a>
+                            <div class="project-title">Grandeur</div>
                             <div class="project-desc">
-                                High-converting landing pages for SaaS products — animated hero sections, feature grids,
-                                pricing tables, testimonial sliders, and CTA sections.
-                            </div>
-                            <div class="card-footer-custom">
-                                <span style="font-size:11px;color:var(--muted)">CSS animations · High conversion</span>
-                                <span class="view-link">View <i class="ti ti-arrow-right"></i></span>
+                                Fully responsive ecommerce frontend with product listing, filters, cart UI, and checkout
+                                pages.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.15s">
+                <!-- Oil & Gas -->
+                <div class="col-md-6 col-lg-4 reveal project-item oilgas">
                     <div class="project-card">
                         <div class="card-thumb">
-                            <div class="thumb-pattern"></div>
-                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/setco.webp" alt="">
+                            </div>
+                            <i class="ti ti-flame thumb-icon"></i>
                             <span class="project-num">05</span>
                         </div>
                         <div class="card-body-custom">
-                            <div class="project-tags">
-                                <span class="ptag">React.js</span><span class="ptag">Tailwind</span><span
-                                    class="ptag">Next.js</span>
-                            </div>
-                            <div class="project-title">React Dashboard UI</div>
+                            <a href="https://setcobio.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Setco</div>
                             <div class="project-desc">
-                                Component-based admin dashboard with reusable UI components, routing, dynamic sidebar,
-                                data tables, and responsive layout built in React and Next.js.
-                            </div>
-                            <div class="card-footer-custom">
-                                <span style="font-size:11px;color:var(--muted)">Component-based · Reusable</span>
-                                <span class="view-link">View <i class="ti ti-arrow-right"></i></span>
+                                Responsive dashboard UI for oil & gas analytics with charts, reports and admin panels.
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-6 col-lg-4 reveal" style="transition-delay:.25s">
-                    <div class="project-card"
-                        style="border-style:dashed;display:flex;align-items:center;justify-content:center;min-height:380px">
-                        <div style="text-align:center;padding:40px">
-                            <div
-                                style="width:60px;height:60px;border-radius:50%;border:1.5px dashed var(--border);display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
-                                <i class="ti ti-plus" style="color:var(--muted);font-size:22px"></i>
+                <div class="col-md-6 col-lg-4 reveal project-item oilgas">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/delight.webp" alt="delight-engineering">
                             </div>
-                            <div style="font-family:var(--font-head);font-weight:700;font-size:16px;margin-bottom:8px">
-                                More Projects</div>
-                            <div style="font-size:13px;color:var(--muted);line-height:1.6">20+ live projects
-                                available.<br />Get in touch to see more work.</div>
-                            <a href="#contact"
-                                style="display:inline-block;margin-top:20px;font-size:13px;font-weight:600;color:var(--accent);font-family:var(--font-head)">Contact
-                                me →</a>
+                            <i class="ti ti-building-estate thumb-icon"></i>
+                            <span class="project-num">06</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://www.delightengineering.ae/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Delight Engineering</div>
+                            <div class="project-desc">
+                                Multi-page real estate website with property listings, filters and responsive design.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item oilgas">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/gms.webp" alt="">
+                            </div>
+                            <i class="ti ti-brand-wordpress thumb-icon"></i>
+                            <span class="project-num">07</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://www.gmsplc.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Gulf Marine Services</div>
+                            <div class="project-desc">
+                                Custom WordPress website for a digital agency with responsive UI and optimizations.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Agency -->
+                <div class="col-md-6 col-lg-4 reveal project-item agency">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/greenstrom.webp" alt="">
+                            </div>
+                            <i class="ti ti-rocket thumb-icon"></i>
+                            <span class="project-num">08</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://greenstorm.energy/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                                
+                            </a>
+                            <div class="project-title">GreenStorm</div>
+                            <div class="project-desc">
+                                High-converting landing pages with animations, pricing tables and CTA sections.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/fmb.webp" alt="fast-marine-boats">
+                            </div>
+                            <i class="ti ti-rocket thumb-icon"></i>
+                            <span class="project-num">09</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://fastmarineboat.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                                
+                            </a>
+                            <div class="project-title">Fast Marine Boats</div>
+                            <div class="project-desc">
+                                High-converting landing pages with animations, pricing tables and CTA sections.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- React Dashboard -->
+                <div class="col-md-6 col-lg-4 reveal project-item agency">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/evolve-tax.webp" alt="evolve-tax">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">10</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://evolvetax.co.uk/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Evolve Tax</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- React Dashboard -->
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/branieyez.webp" alt="branieyez">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">11</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://www.brainzneye.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">BrainzNeye</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/al-avon.webp" alt="al-avon">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">12</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://alavoncontracting.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Al Avon Contracting</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/awm.webp" alt="awm">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">13</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://awm.ae/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">React Dashboard UI</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/bulkan-trading.webp" alt="bulkan-trading">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">14</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="http://www.balkantrading.org/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Balkan Trading</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/k2mpro.webp" alt="k2mpro">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">15</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://k2mpro.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">K2MPro</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/kan-tobacco.webp" alt="kan-tobacco">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">16</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="http://kaanetobacco.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Kaane Tobacco</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item businesswebsite">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/ora-tobacco.webp" alt="ora-tobacco">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">17</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://www.oratobacco.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Ora Tobacco</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item agency">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/security-pack.webp" alt="security-pack">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">18</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Security Pack</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item agency">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/techno-steel.webp" alt="techno-steel">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">19</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://technosteelconstruction-uae.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Techno Steel Construction</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 reveal project-item agency">
+                    <div class="project-card">
+                        <div class="card-thumb">
+                            <div class="thumb-pattern">
+                                <img src="./assets/images/web-project/veneto-clinic.webp" alt="veneto-clinic">
+                            </div>
+                            <i class="ti ti-brand-react thumb-icon"></i>
+                            <span class="project-num">20</span>
+                        </div>
+                        <div class="card-body-custom">
+                            <a href="https://veneto-clinic.com/" target="_blank" class="project-tags">
+                                <span class="ptag">Live Demo</span>
+                            </a>
+                            <div class="project-title">Veneto Clinic</div>
+                            <div class="project-desc">
+                                Component-based admin dashboard with reusable UI components and responsive layouts.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -725,7 +1007,8 @@
                         <a href="#" class="slink" target="_blank" title="LinkedIn"><i
                                 class="ti ti-brand-linkedin"></i></a>
                         <a href="#" class="slink" target="_blank" title="GitHub"><i class="ti ti-brand-github"></i></a>
-                        <a href="https://www.upwork.com/freelancers/~018104dc51eba6b087" class="slink" target="_blank" title="Upwork"><i class="ti ti-briefcase"></i></a>
+                        <a href="https://www.upwork.com/freelancers/~018104dc51eba6b087" class="slink" target="_blank"
+                            title="Upwork"><i class="ti ti-briefcase"></i></a>
                         <a href="https://wa.link/u255ke" class="slink" target="_blank" title="WhatsApp"><i
                                 class="ti ti-brand-whatsapp"></i></a>
                     </div>
@@ -743,7 +1026,7 @@
                     <div class="brand">NI<span>.</span></div>
                 </div>
                 <div class="col-md-4 text-center">
-                    <span>© 2025 Noman Imran. All rights reserved.</span>
+                    <span>© <span id="year">2025</span> Noman Imran. All rights reserved.</span>
                 </div>
                 <div class="col-md-4 text-end">
                     <span>Built with HTML5, SCSS &amp; Bootstrap 5</span>
@@ -755,64 +1038,32 @@
     <!-- ═══════════════════════════ SCRIPTS ═════════════════════════ -->
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/lenis.min.js"></script>
+    <script src="./assets/js/main.js"></script>
     <script>
-        // ── Navbar scroll effect
-        const nav = document.getElementById('mainNav');
-        window.addEventListener('scroll', () => {
-            nav.classList.toggle('scrolled', window.scrollY > 30);
-        });
+        if (window.innerWidth > 992) {
 
-        // ── Active nav link highlight
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(s => {
-                if (window.scrollY >= s.offsetTop - 120) current = s.id;
+            const lenis = new Lenis({
+                lerp: 0.08,
+                duration: 3,
+                smoothWheel: true,
+                smoothTouch: false,
+                infinite: false,
             });
-            navLinks.forEach(l => {
-                l.classList.toggle('active', l.getAttribute('href') === '#' + current);
-            });
-        });
 
-        // ── Skill bar animation on scroll
-        const bars = document.querySelectorAll('.progress-bar');
-        const barObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.style.width = e.target.dataset.width + '%';
-                    barObserver.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.3 });
-        bars.forEach(b => barObserver.observe(b));
-
-        // ── Reveal on scroll
-        const reveals = document.querySelectorAll('.reveal');
-        const revObserver = new IntersectionObserver((entries) => {
-            entries.forEach(e => {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    revObserver.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.1 });
-        reveals.forEach(r => revObserver.observe(r));
-
-        // ── Contact form feedback
-        document.querySelector('.btn-submit').addEventListener('click', function () {
-            const n = document.querySelectorAll('.form-control-custom')[0].value;
-            if (n.trim()) {
-                this.innerHTML = '<i class="ti ti-check"></i> Message Sent!';
-                this.style.background = '#00c89a';
-                setTimeout(() => {
-                    this.innerHTML = 'Send Message <i class="ti ti-send"></i>';
-                    this.style.background = '';
-                }, 3000);
+            function raf(time) {
+                lenis.raf(time);
+                requestAnimationFrame(raf);
             }
-        });
-    </script>
 
+            requestAnimationFrame(raf);
+
+            // GSAP ScrollTrigger support
+            if (window.ScrollTrigger) {
+                lenis.on('scroll', ScrollTrigger.update);
+            }
+
+        }
+    </script>
 </body>
 
 </html>
