@@ -1303,7 +1303,7 @@
                     const updatedUrl = currentUrl.split('?status=done')[0];
                     window.history.replaceState(null, '', updatedUrl);
                 }
-            }, 3000);
+            }, 30000);
         } else if (status === "error") {
             ToastifySuccess("Something Went Wrong!");
             setTimeout(() => {
@@ -1312,13 +1312,13 @@
                     const updatedUrl = currentUrl.split('?status=error')[0];
                     window.history.replaceState(null, '', updatedUrl);
                 }
-            }, 3000);
+            }, 30000);
         }
 
         function ToastifySuccess(message) {
             Toastify({
                 text: message,
-                duration: 3000,
+                duration: 30000,
                 className: "success",
                 close: true,
                 style: {
@@ -1330,3 +1330,136 @@
 </body>
 
 </html>
+
+
+ <!-- <div class="row g-4 align-items-start">
+    <div class="col-lg-7 reveal">
+        <div class="contact-card">
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <div class="input">
+                        <label class="form-label-custom">First Name</label>
+                        <input type="text" name="firstname" class="form-control-custom"
+                            placeholder="John Smith" />
+                        <span class="error-txt"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input">
+                        <label class="form-label-custom">Last Name</label>
+                        <input type="text" name="lastname" class="form-control-custom"
+                            placeholder="John Smith" />
+                        <span class="error-txt"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input">
+                        <label class="form-label-custom">Email Address</label>
+                        <input type="email" name="email" class="form-control-custom"
+                            placeholder="john@company.com" />
+                        <span class="error-txt"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input">
+                        <label for="">Phone Number</label>
+                        <input type="tel" name="phone" id="phone"
+                            oninput="this.value = this.value.replace(/[^0-9]/g, '');" />
+                        <span class="error-txt"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input">
+                        <label class="form-label-custom">Subject</label>
+                        <input type="text" class="form-control-custom"
+                            placeholder="Frontend Developer — Job Opportunity" />
+                        <span class="error-txt"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input">
+                        <label>What can I help you with?</label>
+                        <select name="interestedservice" class="select2">
+                            <option value="">Select Service</option>
+                            <option value="Landing Page">Landing Page</option>
+                            <option value="Business Website">Business Website</option>
+                            <option value="Corporate Website">Corporate Website</option>
+                            <option value="Agency Website">Agency Website</option>
+                            <option value="Ecommerce Website">Ecommerce Website</option>
+                            <option value="Real Estate Website">Real Estate Website</option>
+                            <option value="Figma to HTML">Figma to HTML</option>
+                            <option value="React / Next.js Website">React / Next.js Website</option>
+                            <option value="Website Redesign">Website Redesign</option>
+                            <option value="Website Fix / Improvements">Website Fix / Improvements</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <span class="error-txt"></span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label class="form-label-custom">Message</label>
+                    <textarea class="form-control-custom"
+                        placeholder="Tell me about your project or opportunity..."></textarea>
+                </div>
+                <div class="col-12">
+                    <div class="input recapcha">
+                        <div class="g-recaptcha" data-sitekey="6Ld-I6MtAAAAABNV0Wq824GH2XV6mxkwYYOI9pyC"
+                            data-callback="captchaVerified">
+                        </div>
+                        <span class="error-txt"></span>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <button class="btn-submit">Send Message <i class="ti ti-send"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-lg-4 offset-lg-1 reveal" style="transition-delay:.15s">
+
+        <div class="contact-info-item">
+            <div class="ci-icon"><i class="ti ti-mail"></i></div>
+            <div>
+                <div class="ci-label">Email</div>
+                <a href="mailto:nomiimran1000@gmail.com" target="_blank"
+                    class="ci-val">nomiimran1000@gmail.com</a>
+            </div>
+        </div>
+
+        <div class="contact-info-item">
+            <div class="ci-icon"><i class="ti ti-phone"></i></div>
+            <div>
+                <div class="ci-label">Phone / WhatsApp</div>
+                <a href="https://wa.link/u255ke" target="_blank" class="ci-val">(+92) 313-124-1770</a>
+            </div>
+        </div>
+
+        <div class="contact-info-item">
+            <div class="ci-icon"><i class="ti ti-map-pin"></i></div>
+            <div>
+                <div class="ci-label">Location</div>
+                <div class="ci-val">Karachi, Pakistan</div>
+            </div>
+        </div>
+
+        <div class="contact-info-item" style="margin-bottom:0">
+            <div class="ci-icon"><i class="ti ti-clock"></i></div>
+            <div>
+                <div class="ci-label">Availability</div>
+                <div class="ci-val">Open to Remote &amp; Onsite</div>
+            </div>
+        </div>
+
+        <div class="social-links">
+            <a href="#" class="slink" target="_blank" title="LinkedIn"><i
+                    class="ti ti-brand-linkedin"></i></a>
+            <a href="#" class="slink" target="_blank" title="GitHub"><i class="ti ti-brand-github"></i></a>
+            <a href="https://www.upwork.com/freelancers/~018104dc51eba6b087" class="slink" target="_blank"
+                title="Upwork"><i class="ti ti-briefcase"></i></a>
+            <a href="https://wa.link/u255ke" class="slink" target="_blank" title="WhatsApp"><i
+                    class="ti ti-brand-whatsapp"></i></a>
+        </div>
+    </div>
+
+</div> -->
