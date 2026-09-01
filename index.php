@@ -10,7 +10,7 @@
 
     <link rel="shortcut icon" href="./assets/images/favicon.png" type="image/x-icon" />
     <!-- Bootstrap 5 -->
-    <link href="./assets/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="./assets/styles/css/bootstrap.min.css" rel="stylesheet" />
     <!-- Tabler Icons -->
     <link href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.23/dist/lenis.css">
@@ -19,7 +19,11 @@
         href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
         rel="stylesheet" />
     <!-- Compiled SCSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/styles/css/toastify.css" />
+    <link rel="stylesheet" href="./assets/styles/css/intlTelInput.min.css" />
+    <link rel="stylesheet" href="./assets/styles/css/select2-bootstrap-5-theme.css" />
+    <link rel="stylesheet" href="./assets/styles/css/select2.min.css" />
+    <link rel="stylesheet" href="./assets/styles/css/style.css" />
 </head>
 
 <body>
@@ -27,8 +31,8 @@
     <!-- ═══════════════════════════ NAVBAR ═══════════════════════════ -->
     <nav class="navbar navbar-expand-lg" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#hero">NI<span>.</span></a>
-            <!-- <a class="navbar-brand" href="#hero"><img src="./assets/images/web-project/portfolio-logo.webp" alt="portfolio-logo"></a> -->
+            <!-- <a class="navbar-brand" href="#hero">NI<span>.</span></a> -->
+            <a class="navbar-brand" href="./"><img src="./assets/images/portfolio-logo.svg" alt="portfolio-logo"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -943,31 +947,91 @@
             <div class="row g-4 align-items-start">
 
                 <div class="col-lg-7 reveal">
-                    <div class="contact-card">
+                    <form id="HiringForm" action="HiringForm_code.php" method="POST"
+                                enctype="multipart/form-data" novalidate class="contact-card">
                         <div class="row g-3">
                             <div class="col-md-6">
-                                <label class="form-label-custom">Your Name</label>
-                                <input type="text" class="form-control-custom" placeholder="John Smith" />
+                                <div class="input">
+                                    <label class="form-label-custom">Full Name</label>
+                                    <input type="text" name="fullname" class="form-control-custom"
+                                        placeholder="Enter your full name" />
+                                    <span class="error-txt"></span>
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <label class="form-label-custom">Email Address</label>
-                                <input type="email" class="form-control-custom" placeholder="john@company.com" />
+                                <div class="input">
+                                    <label class="form-label-custom">Email Address</label>
+                                    <input type="text" name="email" class="form-control-custom validate-email"
+                                        placeholder="Enter your email address" />
+                                    <span class="error-txt"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input">
+                                    <label class="form-label-custom">Company Name</label>
+                                    <input type="text" name="companyname" class="form-control-custom"
+                                        placeholder="Enter company name" />
+                                    <span class="error-txt"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input">
+                                    <label class="form-label-custom">Job Position</label>
+                                    <input type="text" name="jobposition" class="form-control-custom"
+                                        placeholder="Enter your job position" />
+                                    <span class="error-txt"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input">
+                                    <label class="form-label-custom">Employment Type</label>
+                                    <select name="employmenttype" class="select2">
+                                        <option value="">Select Employment Type</option>
+                                        <option value="Full-time">Full-time</option>
+                                        <option value="Part-time">Part-time</option>
+                                        <option value="Contract">Contract</option>
+                                        <option value="Freelance">Freelance</option>
+                                    </select>
+                                    <span class="error-txt"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="input">
+                                    <label class="form-label-custom">Work Location</label>
+                                    <select name="worklocation" class="select2">
+                                        <option value="">Select Work Location</option>
+                                        <option value="Remote - Worldwide">
+                                            🌎 Remote — Worldwide
+                                        </option>
+                                        <option value="Hybrid - Karachi, Pakistan">
+                                            📍 Hybrid — Karachi, Pakistan
+                                        </option>
+                                        <option value="On-site - Karachi, Pakistan">
+                                            📍 On-site — Karachi, Pakistan
+                                        </option>
+                                    </select>
+                                    <span class="error-txt"></span>
+                                </div>
                             </div>
                             <div class="col-12">
-                                <label class="form-label-custom">Subject</label>
-                                <input type="text" class="form-control-custom"
-                                    placeholder="Frontend Developer — Job Opportunity" />
+                                <div class="input">
+                                    <label class="form-label-custom">Job Description</label>
+                                    <textarea name="jobdescription" class="form-control-custom" placeholder="Tell me about your project or opportunity..."></textarea>
+                                </div>
                             </div>
                             <div class="col-12">
-                                <label class="form-label-custom">Message</label>
-                                <textarea class="form-control-custom"
-                                    placeholder="Tell me about your project or opportunity..."></textarea>
+                                <div class="input recapcha">
+                                    <div class="g-recaptcha" data-sitekey="6LdVVaMtAAAAAHambbp53fnSTWNQLpqJIESNyq09"
+                                        data-callback="captchaVerified">
+                                    </div>
+                                    <span class="error-txt"></span>
+                                </div>
                             </div>
                             <div class="col-12">
-                                <button class="btn-submit">Send Message <i class="ti ti-send"></i></button>
+                                <button type="submit" class="btn-submit">Send Hiring Request <i class="ti ti-send"></i></button>
                             </div>
                         </div>
-                    </div>
+                    </form>
                 </div>
 
                 <div class="col-lg-4 offset-lg-1 reveal" style="transition-delay:.15s">
@@ -1024,24 +1088,34 @@
     <footer>
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-4">
-                    <div class="brand">NI<span>.</span></div>
+                <div class="col-md-6">
+                    <a class="navbar-brand" href="./"><img src="./assets/images/portfolio-logo.svg" alt="portfolio-logo"></a>
                 </div>
-                <div class="col-md-4 text-center">
-                    <span>© <span id="year">2025</span> Noman Imran. All rights reserved.</span>
-                </div>
-                <div class="col-md-4 text-end">
-                    <span>Built with HTML5, SCSS &amp; Bootstrap 5</span>
+                <div class="col-md-6 text-end">
+                    <span>© <span id="year">2025</span> <a href="./">Noman Imran</a>. All rights reserved.</span>
                 </div>
             </div>
         </div>
     </footer>
 
     <!-- ═══════════════════════════ SCRIPTS ═════════════════════════ -->
+    <script src="./assets/js//jquery.min.js"></script>
+    <script src="./assets/js/select2.min.js"></script>
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <script src="./assets/js/lenis.min.js"></script>
+    <script src="./assets/js/intlTelInput.min.js"></script>
+    <script src="./assets/js/toastify.min.js"></script>
     <script src="./assets/js/main.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=en"></script>
     <script>
+        $(".select2").select2({
+            placeholder: function() {
+                $(this).data('placeholder');
+            },
+            width: '100%',
+            theme: 'bootstrap-5',
+        });
+        // Select Input Js End
         if (window.innerWidth > 992) {
 
             const lenis = new Lenis({
@@ -1064,6 +1138,193 @@
                 lenis.on('scroll', ScrollTrigger.update);
             }
 
+        }
+
+
+
+        $("#HiringForm").on("submit", function(e) {
+            // e.preventDefault();
+            $("form .primary-btn").attr("disabled", true);
+            const fullname = $(this).find("[name='fullname']");
+            const email = $(this).find("[name='email']");
+            const companyname = $(this).find("[name='companyname']");
+            const jobposition = $(this).find("[name='jobposition']");
+            const employmenttype = $(this).find("[name='employmenttype']");
+            const worklocation = $(this).find("[name='worklocation']");
+            var grecaptchaResponse = grecaptcha.getResponse();
+            var recapcha = $(".input.recapcha");
+            let submit = true;
+
+            if (fullname.val() == "") {
+                fullname.parent().addClass("error");
+                fullname.parent().find(".error-txt").html("This field is requried");
+                submit = false;
+            }
+
+            if (email.val() == "") {
+                email.parent().addClass("error");
+                email.parent().find(".error-txt").html("This field is requried");
+                submit = false;
+            } else if (!checkEmailField(email.val())) {
+                email.parent().addClass("error");
+                email.parent().find(".error-txt").html("Invalid email");
+                submit = false;
+            }
+
+            if (companyname.val() == "") {
+                companyname.parent().addClass("error");
+                companyname.parent().find(".error-txt").html("This field is requried");
+                submit = false;
+            }
+
+            if (jobposition.val() == "") {
+                jobposition.parent().addClass("error");
+                jobposition.parent().find(".error-txt").html("This field is requried");
+                submit = false;
+            }
+
+            if (employmenttype.val() == "") {
+                employmenttype.parent().addClass("error")
+                employmenttype.parent().find(".error-txt").html("This field is requried")
+                submit = false
+            }
+
+            if (worklocation.val() == "") {
+                worklocation.parent().addClass("error");
+                worklocation.parent().find(".error-txt").html("This field is requried");
+                submit = false;
+            }
+
+            if (!grecaptchaResponse) {
+                recapcha.addClass("error");
+                recapcha.find(".error-txt").html("Please verify that you are human");
+                submit = false;
+            } else {
+                captchaVerified();
+            }
+
+            if (!submit) {
+                e.preventDefault();
+                $("form .primary-btn").attr("disabled", true);
+            }
+        });
+
+        function captchaVerified() {
+            var recapcha = $(".input.recapcha");
+            recapcha.removeClass("error");
+            recapcha.find(".error-txt").html("");
+            // checkForm();
+        }
+
+
+        $("#HiringForm input").on("input", function() {
+            $(this).parents(".input").removeClass("error");
+            $(this).parents(".input").find(".error-txt").html("");
+        });
+
+        $("#HiringForm select").on("change", function() {
+            $(this).parent().removeClass("error")
+            $(this).parent().find(".error-txt").html("")
+        });
+
+        // $(document).ready(function() {
+        //     const $btn = $('.form-btn');
+        //     $btn.prop('disabled', true).addClass('active');
+
+        //     $('#HiringForm input, #HiringForm textarea').on('input keyup', checkForm);
+        //     $('#HiringForm select').on('change', checkForm);
+        //     $('#HiringForm select.select2').on('select2:select select2:clear', checkForm);
+        //     checkForm();
+        // });
+
+        // email validation
+        document.querySelectorAll(".validate-email").forEach(element => {
+            let filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+            element.addEventListener("blur", function() {
+                if (!filter.test(element.value)) {
+                    element.parentElement.classList.add("error")
+                    element.parentElement.querySelector(".error-txt").innerHTML = "Invalid Email";
+                } else {
+                    element.parentElement.classList.remove("error")
+                    element.parentElement.querySelector(".error-txt").innerHTML = "";
+                }
+                if (element.value === "") {
+                    element.parentElement.classList.remove("error")
+                    element.parentElement.querySelector(".error-txt").innerHTML = "";
+                }
+            });
+        });
+
+        // function checkForm() {
+        //     let allFilled = true;
+        //     $('#ContactForm input:not([name="full_phone"]):not(.iti__search-input), #ContactForm textarea:not([name="g-recaptcha-response"]), #ContactForm select').each(function() {
+        //         let val = $(this).val();
+
+        //         if (val === null || val.trim() === '') {
+        //             allFilled = false;
+        //             return false;
+        //         }
+        //     });
+        //     if (typeof iti !== "undefined") {
+        //         const phoneVal = $("#phone").val().trim();
+
+        //         if (phoneVal === "" || !iti.isValidNumber()) {
+        //             allFilled = false;
+        //         }
+        //     }
+
+        //     if (allFilled) {
+        //         $('.form-btn').prop('disabled', false).removeClass('active');
+        //     } else {
+        //         $('.form-btn').prop('disabled', true).addClass('active');
+        //     }
+
+        // }
+
+
+        function checkEmailField(val) {
+            let isValid = true;
+            if (
+                !/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(val)
+            ) {
+                isValid = false;
+            }
+            return isValid;
+        }
+
+        const url = new URL(window.location.href);
+        const params = new URLSearchParams(url.search);
+        const status = params.get('status');
+        if (status === "done") {
+            ToastifySuccess("Thank You, Your Message has been sent!");
+            setTimeout(() => {
+                const currentUrl = window.location.href;
+                if (currentUrl.includes('?status=done')) {
+                    const updatedUrl = currentUrl.split('?status=done')[0];
+                    window.history.replaceState(null, '', updatedUrl);
+                }
+            }, 3000);
+        } else if (status === "error") {
+            ToastifySuccess("Something Went Wrong!");
+            setTimeout(() => {
+                const currentUrl = window.location.href;
+                if (currentUrl.includes('?status=error')) {
+                    const updatedUrl = currentUrl.split('?status=error')[0];
+                    window.history.replaceState(null, '', updatedUrl);
+                }
+            }, 3000);
+        }
+
+        function ToastifySuccess(message) {
+            Toastify({
+                text: message,
+                duration: 3000,
+                className: "success",
+                close: true,
+                style: {
+                    background: "#fff",
+                },
+            }).showToast();
         }
     </script>
 </body>
