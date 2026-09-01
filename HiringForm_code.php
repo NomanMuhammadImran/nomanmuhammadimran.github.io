@@ -367,7 +367,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <tr>
               <td align='center' valign='top' class='mobile-pad'
                 style='padding:40px 40px 32px 40px; background:linear-gradient(180deg,#111826 0%,#0d1117 100%); border-bottom:1px solid #1c222b;'>
-                <img src='https://nomanmuhammadimran.github.io/assets/images/email-portfolio-logo.png' width='170'
+                <img src='https://nomanmuhammadimran.github.io/assets/images/email-portfolio-logo.png' width='250'
                   alt='Noman Imran' style='display:block; margin:0 auto 22px auto;' />
                 <span class='badge'>New Job Opportunity</span>
                 <h1 style='font-size:24px; margin-top:16px; line-height:130%;'>
@@ -450,8 +450,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </html>";
 
-  echo $message1;
-  die();
+  // echo $message1;
+  // die();
 
   $recipients = array("nomiimran1000@gmail.com");
   $names = array('Noman Imran');
