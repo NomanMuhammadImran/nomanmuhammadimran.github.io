@@ -2,16 +2,16 @@
 include("includes/function.php");
 ///////////////////////////////////  ===>|.EMAIL START.|<===  ///////////////////////////////////
 // define variables and set to empty values
-$fullname  = $email = $companyname = $jobposition = $employmenttype = $worklocation = $jobdescription ="";
+$fullname = $email = $phone = $companyname = $projecttype = $budgetrange = $projecttimeline = $projectdetails ="";
 
 // $service = implode(", ", $_POST["services"]);
 
 // echo $_POST["fullname"] . " <br/> ";
 // echo $_POST["email"] . " <br/> ";
 // echo $_POST["companyname"] . " <br/> ";
-// echo $_POST["jobposition"] . " <br/> ";
-// echo $_POST["employmenttype"] . " <br/> ";
-// echo $_POST["worklocation"] . " <br/> ";
+// echo $_POST["projecttype"] . " <br/> ";
+// echo $_POST["budgetrange"] . " <br/> ";
+// echo $_POST["projecttimeline"] . " <br/> ";
 // echo $_POST["message"] . " <br/> ";
 // die;
 
@@ -46,25 +46,38 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $email = test_input($_POST["email"]);
   }
 
-  $status = "";
-  if (empty($_POST["jobposition"])) {
+  if (empty($_POST["full_phone"])) {
     $status = "error";
   } else {
-    $jobposition = test_input($_POST["jobposition"]);
+    $phone = test_input($_POST["full_phone"]);
   }
 
   $status = "";
-  if (empty($_POST["employmenttype"])) {
+  if (empty($_POST["projecttype"])) {
     $status = "error";
   } else {
-    $employmenttype = test_input($_POST["employmenttype"]);
+    $projecttype = test_input($_POST["projecttype"]);
   }
 
   $status = "";
-  if (empty($_POST["worklocation"])) {
+  if (empty($_POST["budgetrange"])) {
     $status = "error";
   } else {
-    $worklocation = test_input($_POST["worklocation"]);
+    $budgetrange = test_input($_POST["budgetrange"]);
+  }
+
+  $status = "";
+  if (empty($_POST["projecttimeline"])) {
+    $status = "error";
+  } else {
+    $projecttimeline = test_input($_POST["projecttimeline"]);
+  }
+
+  $status = "";
+  if (empty($_POST["projectdetails"])) {
+    $status = "error";
+  } else {
+    $projectdetails = test_input($_POST["projectdetails"]);
   }
 
   if (!empty($status)) {
@@ -73,7 +86,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
   // Non Required Fileds
-  $jobdescription = test_input($_POST["jobdescription"]);
+  // $projectdetails = test_input($_POST["projectdetails"]);
 
   $fullnametr = "";
   if (!empty($fullname)) {
@@ -118,6 +131,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </tr>";
   }
 
+  $phonetr = "";
+  if (!empty($phone)) {
+    $phonetr = "<tr>
+      <td align='left' class='flexibleContainerBox' valign='top'>
+        <table border='0' cellpadding='0' cellspacing='0' style='max-width: 100%;'>
+          <tr>
+            <td align='left' class='textContent'>
+              <h4
+                style='text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#00F5C4;line-height:135%;margin-bottom: 15px;'>
+                Phone Number: </h4>
+              <div
+                style='text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#fff;line-height:135%;;'>
+                " . $phone . "
+              </div>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>";
+  }
+
   $companynametr = "";
   if (!empty($companyname)) {
     $companynametr = "<tr>
@@ -139,9 +173,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </tr>";
   }
 
-  $jobpositiontr = "";
-  if (!empty($jobposition)) {
-    $jobpositiontr = "<tr>
+  $projecttypetr = "";
+  if (!empty($projecttype)) {
+    $projecttypetr = "<tr>
       <td align='left' class='flexibleContainerBox' valign='middle'>
         <table border='0' cellpadding='0' cellspacing='0' class='flexibleContainerBoxNext'
           style='max-width: 100%;'>
@@ -152,7 +186,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 Job Position: </h4>
               <div
                 style='text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#fff;line-height:135%;;'>
-                " . $jobposition . "
+                " . $projecttype . "
               </div>
             </td>
           </tr>
@@ -161,9 +195,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </tr>";
   }
 
-  $employmenttypetr = "";
-  if (!empty($employmenttype)) {
-    $employmenttypetr = "<tr>
+  $budgetrangetr = "";
+  if (!empty($budgetrange)) {
+    $budgetrangetr = "<tr>
       <td align='left' class='flexibleContainerBox' valign='middle'>
         <table border='0' cellpadding='0' cellspacing='0' class='flexibleContainerBoxNext'
           style='max-width: 100%;'>
@@ -174,7 +208,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 Employment Type: </h4>
               <div
                 style='text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#fff;line-height:135%;;'>
-                " . $employmenttype . "
+                " . $budgetrange . "
               </div>
             </td>
           </tr>
@@ -184,9 +218,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   }
 
 
-  $worklocationtr = "";
-  if (!empty($worklocation)) {
-    $worklocationtr = "<tr>
+  $projecttimelinetr = "";
+  if (!empty($projecttimeline)) {
+    $projecttimelinetr = "<tr>
       <td align='left' class='flexibleContainerBox' valign='middle'>
         <table border='0' cellpadding='0' cellspacing='0' class='flexibleContainerBoxNext'
           style='max-width: 100%;'>
@@ -197,7 +231,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 Work Location: </h4>
               <div
                 style='text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#fff;line-height:135%;;'>
-                " . $worklocation . "
+                " . $projecttimeline . "
               </div>
             </td>
           </tr>
@@ -206,9 +240,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     </tr>";
   }
 
-  $jobdescriptiontr = '';
-  if (!empty($jobdescription)) {
-    $jobdescriptiontr = "<tr>
+  $projectdetailstr = '';
+  if (!empty($projectdetails)) {
+    $projectdetailstr = "<tr>
       <td align='left' class='flexibleContainerBox' valign='middle'>
         <table border='0' cellpadding='0' cellspacing='0' class='flexibleContainerBoxNext'
           style='max-width: 100%;'>
@@ -219,7 +253,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 Job Description: </h4>
               <div
                 style='text-align:left;font-family:Helvetica,Arial,sans-serif;font-size:15px;margin-bottom:0;color:#fff;line-height:135%;margin-bottom: 15px;'>
-                " . $jobdescription . "
+                " . $projectdetails . "
               </div>
             </td>
           </tr>
@@ -363,12 +397,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 style='padding:40px 40px 32px 40px; background:linear-gradient(180deg,#111826 0%,#0d1117 100%); border-bottom:1px solid #1c222b;'>
                 <img src='https://nomanmuhammadimran.github.io/assets/images/email-portfolio-logo.png' width='250'
                   alt='Noman Imran' style='display:block; margin:0 auto 22px auto;' />
-                <span class='badge'>New Job Opportunity</span>
+                <span class='badge'>NEW PROJECT INQUIRY</span>
                 <h1 style='font-size:24px; margin-top:16px; line-height:130%;'>
-                  Someone Wants To Hire You!
+                  Someone Wants To Work With You!
                 </h1>
                 <p style='color:#8b949e; font-size:14px; margin:10px 0 0 0; line-height:150%;'>
-                  A potential client just submitted a hiring request through your portfolio.
+                  A potential client just submitted a project inquiry through your portfolio.
                 </p>
               </td>
             </tr>
@@ -377,8 +411,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <tr>
               <td class='mobile-pad' style='padding:28px 40px 8px 40px;'>
                 <p style='color:#fff; font-size:15px; line-height:160%; margin:0; text-align:center;'>
-                  Hi Noman, great news — someone is interested in working with you.
-                  Here are the details they shared below.
+                  Hi Noman, great news — a potential client is interested in working with you. Here are the project details they shared below.
                 </p>
               </td>
             </tr>
@@ -389,12 +422,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <table border='0' cellpadding='0' cellspacing='0' width='100%' class='field-table'
                   style='background-color:#000; border:1px solid #1c222b; border-radius:12px;'>
                   " . $fullnametr . "
-                  " . $companynametr . "
                   " . $emailtr . "
-                  " . $jobpositiontr . "
-                  " . $employmenttypetr . "
-                  " . $worklocationtr . "
-                  " . $jobdescriptiontr . "
+                  " . $phonetr . "
+                  " . $companynametr . "
+                  " . $projecttypetr . "
+                  " . $budgetrangetr . "
+                  " . $projecttimelinetr . "
+                  " . $projectdetailstr . "
                 </table>
               </td>
             </tr>
@@ -451,7 +485,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $names = array('Noman Imran');
 
   // $subject = "Hiring Form Email From Noman Imran";
-  $subject = "New Hiring Request from Noman Imran - " . date("Y-m-d H:i:s") . " - " . $_POST['name'];
+  $subject = "New Project Request from Noman Imran" . $_POST['name'] . " - " . date("Y-m-d H:i:s");
   $sendmail = sendmail($recipients, $subject, $message1, $names, $email);
 
   if ($sendmail) {

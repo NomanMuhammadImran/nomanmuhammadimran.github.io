@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set("Asia/Dubai");
+date_default_timezone_set("Asia/Karachi");
 
 //include ("phpMailer/class.phpmailer.php");
 use PHPMailer\PHPMailer\PHPMailer;
