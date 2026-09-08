@@ -1,0 +1,15 @@
+annotations:
+  anybuild.run/config:
+    name: out
+    phpix: true
+  anybuild.run/provider: php
+  anybuild.run/version: 0.28.2
+  wasmer.io/version: 7.4.0
+app_id: da_KE4I8tXUZdvJ
+enable_email: true
+env:
+  PHPIX_PHP_THREADS: '4'
+kind: wasmer.io/App.v0
+name: nomanmuhammadimran
+owner: nomiimran911
+package: sha256:11edf11afac83f1857898d4c42939f862ee590afb6131ffada30129844e9a8db
