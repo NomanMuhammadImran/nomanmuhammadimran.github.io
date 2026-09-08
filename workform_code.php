@@ -485,7 +485,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $names = array('Noman Imran');
 
   // $subject = "Hiring Form Email From Noman Imran";
-  $subject = "New Project Request from Noman Imran" . $_POST['name'] . " - " . date("Y-m-d H:i:s");
+  $subject = "New Project Request from - " . $fullname . " - " . date("Y-m-d H:i:s");
   $sendmail = sendmail($recipients, $subject, $message1, $names, $email);
 
   if ($sendmail) {
